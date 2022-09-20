@@ -1,6 +1,6 @@
 binlog2sql
 ========================
-GRANT SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON . TO 'canal'@'%' IDENTIFIED BY 'canal' ; FLUSH PRIVILEGES;
+GRANT SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'canal'@'%' IDENTIFIED BY 'canal' ; FLUSH PRIVILEGES;
 
 python3 binlog2sql/binlog2sql.py --flashback -h192.168.1.5 -P3306 -ucanal -pcanal -dmall --start-file='mysql-bin.000014' --start-datetime='2022-09-20 20:41:00' --stop-datetime='2022-09-20 20:59:00' > dgb_pro.sql
 MySQL 5.7.34个人测试可用
