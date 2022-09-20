@@ -1,6 +1,6 @@
 binlog2sql
 ========================
-
+python3 binlog2sql/binlog2sql.py --flashback -h192.168.1.5 -P3306 -ucanal -pcanal -dmall --start-file='mysql-bin.000014' --start-datetime='2022-09-20 20:41:00' --stop-datetime='2022-09-20 20:59:00' > dgb_pro.sql
 MySQL 5.7.34个人测试可用
 得到数据集合
 INSERT INTO `nidemall_go_dev`.`mall_user_fav_33`(`id`, `version`, `user_id`, `sku_id`, `goods_id`, `shop_id`, `created_at`, `updated_at`, `deleted_at`, `created_by`, `updated_by`, `name_suffix`, `product_id`) VALUES (9, 0, 1, 26, 20, 0, '2021-11-21 19:00:09', '2021-11-21 19:00:09', NULL, 0, 0, '33', NULL); #start 9616382 end 9616979 time 2022-09-20 20:52:50
